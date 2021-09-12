@@ -1,0 +1,57 @@
+<xsd:complexType name="EMPLOYER">
+	<xsd:annotation>
+		<xsd:documentation>Information about the borrower's current and previous employers including name, address, contact information, time on job and type of employment. Also includes information about the verification status of the employment and credit comments relating to the employment.</xsd:documentation>
+	</xsd:annotation>
+	<xsd:sequence>
+		<xsd:choice minOccurs="0">
+			<xsd:element name="INDIVIDUAL" type="INDIVIDUAL" minOccurs="0">
+				<xsd:annotation/>
+			</xsd:element>
+			<xsd:element name="LEGAL_ENTITY" type="LEGAL_ENTITY" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>This is additional information that describes or identifies a legal entity.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:choice>
+		<xsd:element name="ADDRESS" type="ADDRESS" minOccurs="0">
+			<xsd:annotation>
+				<xsd:documentation>Address is based upon USPS publication 28. Publication 28 has two sections, format of an address on a piece of mail and data points that MAY compose an address. The data point children of ADDRESS are the union components of an address on a piece of mail or a package.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:element>
+		<xsd:element name="CREDIT_COMMENTS" type="CREDIT_COMMENTS" minOccurs="0">
+			<xsd:annotation/>
+		</xsd:element>
+		<xsd:element name="EMPLOYMENT" type="EMPLOYMENT" minOccurs="0">
+			<xsd:annotation>
+				<xsd:documentation>Additional information about the employer.</xsd:documentation>
+				<xsd:documentation>Additional information about the employer.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:element>
+		<xsd:element name="EMPLOYMENT_DOCUMENTATIONS" type="EMPLOYMENT_DOCUMENTATIONS" minOccurs="0">
+			<xsd:annotation>
+				<xsd:documentation> Contains information about the documents that may be associated with employment.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:element>
+		<xsd:element name="VERIFICATION" type="VERIFICATION" minOccurs="0">
+			<xsd:annotation>
+				<xsd:documentation>Information around the verification of a particular item (e.g. asset, income, employment, rent, etc).</xsd:documentation>
+			</xsd:annotation>
+		</xsd:element>
+		<xsd:element name="EXTENSION" type="EMPLOYER_EXTENSION" minOccurs="0"/>
+	</xsd:sequence>
+	<xsd:attribute name="SequenceNumber" type="MISMOSequenceNumber_Base">
+		<xsd:annotation>
+			<xsd:documentation>An integer value used to provide an order to multi-instance sibling elements. The value must be unique for each sibling element.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attributeGroup ref="xlink:MISMOresourceLink">
+		<xsd:annotation>
+			<xsd:documentation>An xlink attribute group for defining the end point of a relationship.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attributeGroup>
+	<xsd:attributeGroup ref="AttributeExtension">
+		<xsd:annotation>
+			<xsd:documentation>An implementation of the ability to extend an instance document by using any attribute. To change from Lax to make an redefinition restriction of AttributeExtension attribute group.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attributeGroup>
+</xsd:complexType>

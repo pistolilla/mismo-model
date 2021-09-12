@@ -1,0 +1,14 @@
+# Borrower
+CREATE CONSTRAINT borrower_name ON (x:Borrower) ASSERT (x.name) IS NOT NULL;
+CREATE CONSTRAINT borrower_name_unique ON (x:Borrower) ASSERT (x.name) IS UNIQUE;
+# Address
+CREATE CONSTRAINT address_name ON (x:Address) ASSERT (x.name) IS NOT NULL;
+CREATE CONSTRAINT address_name_unique ON (x:Address) ASSERT (x.name) IS UNIQUE;
+# Employer
+CREATE CONSTRAINT employer_name ON (x:Employer) ASSERT (x.name) IS NOT NULL;
+CREATE CONSTRAINT employer_name_unique ON (x:Employer) ASSERT (x.name) IS UNIQUE;
+CREATE CONSTRAINT employer_type ON (x:Employer) ASSERT (x.type) IS NOT NULL;
+# IS_EMPLOYED_BY
+CREATE CONSTRAINT is_employed_by_startdate ON ()-[x:IS_EMPLOYED_BY]-() ASSERT (x.start_date) IS NOT NULL;
+
+CALL db.constraints;

@@ -1,0 +1,90 @@
+<xsd:complexType name="BORROWER">
+    <xsd:annotation>
+        <xsd:documentation>Information specific to the person making the loan; also known as the mortgagor or obligor.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+        <xsd:element name="BANKRUPTCIES" type="BANKRUPTCIES" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Information about one or more types of bankruptcy. Holds all occurrences of BANKRUPTCY.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BORROWER_DETAIL" type="BORROWER_DETAIL" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Additional information about the borrower.</xsd:documentation>
+                <xsd:documentation>Additional information about the borrower.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="COUNSELING" type="COUNSELING" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Information about mortgage counseling or education delivered to the borrower.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="CREDIT_SCORES" type="CREDIT_SCORES" minOccurs="0">
+            <xsd:annotation/>
+        </xsd:element>
+        <xsd:element name="CURRENT_INCOME" type="CURRENT_INCOME" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Information about the borrower's current income, including type, amount, and taxing status.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="DECLARATION" type="DECLARATION" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Declarations that the borrower makes on the Uniform Residential Loan Application in section VIII.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="DEPENDENTS" type="DEPENDENTS" minOccurs="0">
+            <xsd:annotation/>
+        </xsd:element>
+        <xsd:element name="EMPLOYERS" type="EMPLOYERS" minOccurs="0">
+            <xsd:annotation/>
+        </xsd:element>
+        <xsd:element name="GOVERNMENT_BORROWER" type="GOVERNMENT_BORROWER" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>All data points that are unique to processing a government loan including FHA, VA, Rural Housing, etc. This contains the contents of the combined FHA_BORROWER, FHA_VA_BORROWER and VA_BORROWER containers from Version 2.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="GOVERNMENT_MONITORING" type="GOVERNMENT_MONITORING" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Information about the HMDA data that is collected about the borrower including the race of the borrower.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="HARDSHIP_DECLARATION" type="HARDSHIP_DECLARATION" minOccurs="0">
+            <xsd:annotation/>
+        </xsd:element>
+        <xsd:element name="HOUSING_EXPENSES" type="HOUSING_EXPENSES" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Information regarding one or more types of housing expense. Holds all occurrences of HOUSING_EXPENSE.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="MILITARY_SERVICES" type="MILITARY_SERVICES" minOccurs="0">
+            <xsd:annotation/>
+        </xsd:element>
+        <xsd:element name="NEAREST_LIVING_RELATIVE" type="NEAREST_LIVING_RELATIVE" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Defines the name, address, and contact information for the borrower's nearest living relative and defines the relationship of that person to the borrower.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="RESIDENCES" type="RESIDENCES" minOccurs="0">
+            <xsd:annotation/>
+        </xsd:element>
+        <xsd:element name="SOLICITATION_PREFERENCE" type="SOLICITATION_PREFERENCE" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Indicates that the borrower has granted permission to be contacted via specified methods.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="SUMMARIES" type="SUMMARIES" minOccurs="0">
+            <xsd:annotation/>
+        </xsd:element>
+        <xsd:element name="EXTENSION" type="BORROWER_EXTENSION" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attributeGroup ref="xlink:MISMOresourceLink">
+        <xsd:annotation>
+            <xsd:documentation>An xlink attribute group for defining the end point of a relationship.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attributeGroup>
+    <xsd:attributeGroup ref="AttributeExtension">
+        <xsd:annotation>
+            <xsd:documentation>An implementation of the ability to extend an instance document by using any attribute. To change from Lax to make an redefinition restriction of AttributeExtension attribute group.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attributeGroup>
+</xsd:complexType>

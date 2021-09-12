@@ -1,0 +1,21 @@
+<xsd:complexType name="EMPLOYERS">
+    <xsd:annotation/>
+    <xsd:sequence>
+        <xsd:element name="EMPLOYER" type="EMPLOYER" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+                <xsd:documentation>Information about the borrower's current and previous employers including name, address, contact information, time on job and type of employment. Also includes information about the verification status of the employment and credit comments relating to the employment.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="EXTENSION" type="EMPLOYERS_EXTENSION" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attributeGroup ref="xlink:MISMOresourceLink">
+        <xsd:annotation>
+            <xsd:documentation>An xlink attribute group for defining the end point of a relationship.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attributeGroup>
+    <xsd:attributeGroup ref="AttributeExtension">
+        <xsd:annotation>
+            <xsd:documentation>An implementation of the ability to extend an instance document by using any attribute. To change from Lax to make an redefinition restriction of AttributeExtension attribute group.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attributeGroup>
+</xsd:complexType>

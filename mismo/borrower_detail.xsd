@@ -1,0 +1,201 @@
+<xsd:complexType name="BORROWER_DETAIL">
+    <xsd:annotation>
+        <xsd:documentation>Additional information about the borrower.</xsd:documentation>
+        <xsd:documentation>Additional information about the borrower.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+        <xsd:element name="AutomobilesOwnedCount" type="MISMOCount" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>The total number of automobiles owned by a borrower.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerAgeAtApplicationYearsCount" type="MISMOCount" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>The age of the borrower at the time of application in years.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerApplicationSignedDate" type="MISMODate" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>The date that the borrower signed the loan application.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerBankruptcyIndicator" type="MISMOIndicator" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>When true, indicates that the borrower has filed a bankruptcy petition.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerBirthDate" type="MISMODate" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Borrower's date of birth.</xsd:documentation>
+                <xsd:documentation>Collected in lieu of AGE in URLA, Section III, second line, third field.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerCharacteristicType" type="BorrowerCharacteristicEnum" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Specifies the classification applied to a borrower for the purposes of processing or reporting.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerCharacteristicTypeOtherDescription" type="MISMOString" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>The description of the Borrower Characteristic Type when Other is selected as the option from the enumerated list.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerClassificationType" type="BorrowerClassificationEnum" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Indicates whether the borrower is the primary or a secondary borrower.</xsd:documentation>
+                <xsd:documentation>Replaces "Borrower Print Position Type" from Version 2.x.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerIsAnIndividualPersonIndicator" type="MISMOIndicator" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>When true, indicates that the applicant or co-applicant is a natural person and not a legal entity.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerMailToAddressSameAsPropertyIndicator" type="MISMOIndicator" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>When true, indicates that the mailing address for the borrower is the same as the property address.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerQualifyingIncomeAmount" type="MISMOAmount" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>The total monthly borrower income per lender or investor guidelines.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerRelationshipTitleType" type="BorrowerRelationshipTitleEnum" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>The description of the relationship of a borrower to (an) other borrower(s), if any, for Title purposes.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerRelationshipTitleTypeOtherDescription" type="MISMOString" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>When Other is specified in Borrower Relationship Title Type, this element contains the description.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerSameAsBuilderIndicator" type="MISMOIndicator" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>When true, indicates that the Borrower is also the Builder on the loan transaction.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="BorrowerTotalMortgagedPropertiesCount" type="MISMOCount" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>The number of 1-4 unit properties that are financed and owned and/or obligated on by an individual borrower.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="CommunityPropertyStateResidentIndicator" type="MISMOIndicator" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>When true, indicates that the borrower lives in a community property state.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="CreditFileBorrowerAgeYearsCount" type="MISMOCount" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>The age of the borrower reported in the credit file returned from the repository bureau. The age is sometimes reported in lieu of the date of birth.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="CreditReportAuthorizationIndicator" type="MISMOIndicator" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Indicates that the borrower gave the lender consent to pull credit report.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="CreditReportIdentifier" type="MISMOIdentifier" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>A reference number assigned by the credit bureau to a specific credit report. This report number is also referenced when a Reissue, Upgrade, or Status Query of an existing report is requested.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="DependentCount" type="MISMOCount" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>The total number of borrower's dependents.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="DomesticRelationshipIndicator" type="MISMOIndicator" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>When true, indicates that the borrower is in a civil union, domestic partnership, or registered reciprocal beneficiary relationship recognized by the State in which he/she currently resides or where the property is located.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="DomesticRelationshipStateCode" type="MISMOCode" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>The two-character postal representation of the US state, US Territory, Canadian Province, Military APO FPO, or Territory in which the relationship with an individual who is not a legal spouse was formed.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="DomesticRelationshipType" type="DomesticRelationshipEnum" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>A value from a MISMO prescribed list that specifies a borrower’s relationship with an individual who is not a legal spouse but who has real property rights similar to those of a legal spouse.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="DomesticRelationshipTypeOtherDescription" type="MISMOString" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>A free-form text field that specifies the enumeration when the value of Other is used for the Domestic Relationship Type.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="EmploymentStateType" type="EmploymentStateEnum" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>The current employment status of the borrower.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="EmploymentStateTypeOtherDescription" type="MISMOString" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>A free-form text field used to collect additional information when Other is selected for Employment State Type.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="HousingCounselingRequiredIndicator" type="MISMOIndicator" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>When true, indicates the borrower is required to complete some level of housing counseling.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="IntentToProceedWithLoanTransactionIndicatedDate" type="MISMODate" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>The date the borrower indicated his or her intent to proceed with the loan transaction.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="JointAssetLiabilityReportingType" type="JointAssetLiabilityReportingEnum" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>A value from a MISMO prescribed list that specifies how assets and liabilities are being reported on the loan application.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="MaritalStatusType" type="MaritalStatusEnum" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>A value from a MISMO prescribed list that specifies the marital status of the party as disclosed by the party.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="MaritalStatusTypeOtherDescription" type="MISMOString" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>A free-form text field that specifies the enumeration when the value of Other is used for the Marital Status Type.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="SchoolingYearsCount" type="MISMOCount" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>The number of years the borrower has attended school. Collected on the URLA in Section III (Yrs. School).</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="SelfDeclaredMilitaryServiceIndicator" type="MISMOIndicator" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>When true, indicates that the individual is self-reporting as having served, or is currently serving in the US Armed Forces. Includes enlisted persons that may not have served in ‘Active Duty’ status, and service in the National Guard or Reserves. Also includes ‘surviving spouses’ of Veterans who served and were Missing In Action (MIA) /Killed In Action (KIA), who died of a condition or impairment connected to their service in the Armed Forces (as determined by VA or DoD), or who self-report that their spouse’s service and connected disability/impairment entitles them to benefits from the VA.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="SignedAuthorizationToRequestTaxRecordsIndicator" type="MISMOIndicator" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Indicates that the IRS form (4506 or 4506T) that gives the lender the authority to request copies of tax records is present.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="SpousalVABenefitsEligibilityIndicator" type="MISMOIndicator" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>When true, indicates that the individual is a surviving spouse of a Veteran who served and was Missing In Action (MIA) /Killed In Action (KIA), a Veteran who died of a condition or impairment connected to his/her service in the Armed Forces (as determined by VA or DoD), or a Veteran whose service connected disability/impairment, they believe, entitles them to benefits from the VA.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="TaxRecordsObtainedIndicator" type="MISMOIndicator" nillable="true" minOccurs="0">
+            <xsd:annotation>
+                <xsd:documentation>Indicates that the IRS form (4506 or 4506T) that gives the lender the authority to request copies of tax records has been executed by the lender.</xsd:documentation>
+            </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="EXTENSION" type="BORROWER_DETAIL_EXTENSION" minOccurs="0"/>
+    </xsd:sequence>
+    <xsd:attributeGroup ref="xlink:MISMOresourceLink">
+        <xsd:annotation>
+            <xsd:documentation>An xlink attribute group for defining the end point of a relationship.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attributeGroup>
+    <xsd:attributeGroup ref="AttributeExtension">
+        <xsd:annotation>
+            <xsd:documentation>An implementation of the ability to extend an instance document by using any attribute. To change from Lax to make an redefinition restriction of AttributeExtension attribute group.</xsd:documentation>
+        </xsd:annotation>
+    </xsd:attributeGroup>
+</xsd:complexType>
