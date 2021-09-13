@@ -1,0 +1,10 @@
+MATCH (n:Person)
+RETURN duration.between(date(n.BorrowerBirthDate),date()).years
+
+MATCH (e:Employer)
+OPTIONAL MATCH (e:Employer)-[r]-(x)
+RETURN e, r, x
+
+MATCH ()-[r]-() DETACH DELETE r;
+MATCH (n) DELETE n;
+

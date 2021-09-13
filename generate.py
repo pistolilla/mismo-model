@@ -50,7 +50,7 @@ def random_employer():
     type_id = random.randint(0, 1)
     return {
         "name": random_name(1)[0] + ("'s Company" if type_id == 1 else ""),
-        "Type": types[type_id]
+        "type": types[type_id]
     }
 
 def random_document():
